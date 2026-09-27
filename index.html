@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfólio | YURI Bernardo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="imagens/yuri.png" alt="Logo" style="width:48px; height:48px; object-fit:cover;">
+        </div>
+        <ul class="nav-links">
+          <li><a href="#produtos" class="active">projectos</a></li>
+          <li><a href="#projetos-web">Projectos Web</a></li>
+           <li><a href="#projetos-locais">Projectos Locais</a></li>
+           <li><a href="#sobre-mim">Sobre mim</a></li>
+           <li><a href="#contacta-me">Contacta-me</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeBtn" aria-label="Alterar tema">⚡</button>
+    </nav>
+
+    <!-- Hero Section (Sem Carrossel) -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>YURI CUSTÓDIO BERNARDO.</h1>
+            <p>Este é o meu portfólio, dentro dele voçê vai vér muito sobre mim e os meus projectos</p>
+            <a href="#produtos" class="btn-primary">ver os meus trabalhos</a>
+        </div>
+    </header>
+
+    <!-- Filtros Interativos -->
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="phone">WEB</button>
+        <button class="filter-btn" data-filter="pc">SOFTWARES LOCAIS</button>
+    </div>
+
+    <!-- Grelha de Produtos -->
+    <main class="products-grid" id="produtos">
+        <!-- Item 1 -->
+        <div class="product-card" data-category="phone">
+            <div class="product-badge">SITR DE VENDAS DE TELEFONES E COMPUTADORES</div>
+            <div class="product-image" style="background: linear-gradient(45deg, #2b5876, #4e4376);"><img src="imagens/project_triplo_1.svg"></div>
+            <div class="product-info">
+                <h3>TRIPLO B</h3>
+                <P>CRIADO EM 2025</P>
+                <p>PROJECTO ESCOLAR</p>
+                <div class="product-footer">
+                    <span class="price">DISPONIVEL PARA VENDA</span>
+                    <button class="buy-btn" type="button" onclick="openProjectModal('triplo')">VER MAIS</button>
+                </div>
+            </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="product-card" data-category="phone">
+            <div class="product-badge">SITE DE VER FILMES MÚSUCAS E SERIES</div>
+            <div class="product-image" style="background: linear-gradient(45deg, #2b5876, #4e4376);"><img src="imagens/project_yours_1.svg"></div>
+            <div class="product-info">
+                <h3>YOUR HOBBY</h3>
+                <P>CRIADO EM 2026</P>
+                <p>DESENVOLVIDO POR CURIOSIDADE E GOSTO</p>
+                <div class="product-footer">
+                    <span class="price">DISPONIVEL PARA VENDA </span>
+                    <button class="buy-btn" type="button" onclick="openProjectModal('yours')">VER MAIS</button>
+                </div>
+            </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="product-card" data-category="pc">
+            <div class="product-badge">SOFTWARE DE GESTÃO ESCOLAR</div>
+            <div class="product-image" style="background: linear-gradient(45deg, #11998e, #38ef7d);"><img src="imagens/project_moaiwil_1.svg"></div>
+            <div class="product-info">
+                <h3>COLÊGIO MOAIWIL</h3>
+                <p>EM DESENVOLVIMENTO</p>
+                <div class="product-footer">
+                    <span class="price">EN COSTRUÇÃO</span>
+                    <button class="buy-btn" type="button" onclick="openProjectModal('moaiwil')">VER MAIS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Item 4 -->
+        <div class="product-card" data-category="pc">
+            <div class="product-badge">SOFTWARE PARA DE GESTÃO E DE ESTOQUE</div>
+            <div class="product-image" style="background: linear-gradient(45deg, #11998e, #38ef7d);"><img src="imagens/project_farmacia_1.svg"></div>
+            <div class="product-info">
+                <h3> FARMÁCIA CORAGEM</h3>
+                <p>CRIADO EM 2026</p>
+                <div class="product-footer">
+                    <span class="price">DISPONIVEL PARA VENDA</span>
+                    <button class="buy-btn" type="button" onclick="openProjectModal('farmacia')">VER MAIS</button>
+                </div>
+            </div>
+        </div>
+         <!-- Item 5 -->
+         <div class="product-card" data-category="pc">
+            <div class="product-badge">SOFTAWARE DE GESTÃO E DE ESTOQUE </div>
+            <div class="product-image" style="background: linear-gradient(45deg, #11998e, #38ef7d);"><img src="imagens/project_padaria_1.svg"></div>
+            <div class="product-info">
+                <h3>PADARIA CORAGEM</h3>
+                <p>TERMIDADO BREVIMENTE</p>
+                <div class="product-footer">
+                    <span class="price">DISPONIVEL PARA VENDA</span>
+                    <button class="buy-btn" type="button" onclick="openProjectModal('padaria')">VER MAIS</button>
+                </div>
+            </div>
+        </div>
+ 
+ <!-- Item 6 -->
+ <div class="product-card" data-category="phone">
+    <div class="product-badge">SITE DE UMA OFICINA</div>
+    <div class="product-image" style="background: linear-gradient(45deg, #2b5876, #4e4376);"><img src="imagens/project_oficina_1.svg"></div>
+    <div class="product-info">
+        <h3>OFICINA ARMÊNIO</h3>
+        <p>TERMINADO EM 2025</p>
+        <div class="product-footer">
+            <span class="price">DISPONIVEL PARA VENDA</span>
+            <button class="buy-btn" type="button" onclick="openProjectModal('oficina')">VER MAIS</button>
+        </div>
+    </div>
+</div>
+
+ <!-- Item 8 -->
+ <div class="product-card" data-category="phone">
+    <div class="product-badge">SITE QUE FALA SOBRE A GLOBALIZAÇÃO</div>
+    <div class="product-image" style="background: linear-gradient(45deg, #2b5876, #4e4376);"><img src="imagens/project_global_1.svg"></div>
+    <div class="product-info">
+        <h3>TRABALHO ESCOLAR</h3>
+        <p>TERMINADO EM 2025</p>
+        <div class="product-footer">
+            <span class="price">DIPONIVEL PARA VENDA</span>
+            <button class="buy-btn" type="button" onclick="openProjectModal('global')">VER MAIS</button>
+        </div>
+    </div>
+</div>
+
+    </main>
+    <!-- Projectos Web -->
+    <section class="portfolio-section" id="projetos-web">
+        <div class="section-heading">
+            <span>PORTFÓLIO</span>
+            <h2>Projectos Web</h2>
+            <p>Criação de sites modernos, responsivos e interactivos para apresentar negócios, serviços e ideias, para publicitar e ajudar a espandir o teu negócio.</p>
+        </div>
+        <div class="portfolio-grid">
+            <article class="portfolio-card">
+                <div class="project-icon">🌐</div>
+                <h3>Sites Institucionais</h3>
+                <p>Sites profissionais para empresas, marcas, serviços e apresentação de negócios.</p>
+            </article>
+            <article class="portfolio-card">
+                <div class="project-icon">🛒</div>
+                <h3>Sites de Vendas</h3>
+                <p>Catálogos e lojas online para apresentar produtos como telemóveis, computadores e acessórios.</p>
+            </article>
+            <article class="portfolio-card">
+                <div class="project-icon">🎬</div>
+                <h3>Sites Multimédia</h3>
+                <p>Interfaces para conteúdos de filmes, séries, música e outros projectos digitais.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Projectos Locais -->
+    <section class="portfolio-section alternate" id="projetos-locais">
+        <div class="section-heading">
+            <span>DESENVOLVIMENTO</span>
+            <h2>Projectos Locais</h2>
+            <p>Aplicações para computador e sistemas de gestão pensados para funcionar localmente e facilitar o trabalho.</p>
+        </div>
+        <div class="portfolio-grid">
+            <article class="portfolio-card">
+                <div class="project-icon">🏫</div>
+                <h3>Gestão Escolar</h3>
+                <p>Sistemas para estudantes, matrículas, pautas, propinas, professores, documentos e relatórios.</p>
+            </article>
+            <article class="portfolio-card">
+                <div class="project-icon">🥖</div>
+                <h3>Gestão de Negócios</h3>
+                <p>Projectos locais para padarias, lojas, Farmácias e restaurantes  e outros negócios, com produtos, vendas, stock e clientes.</p>
+            </article>
+            <article class="portfolio-card">
+                <div class="project-icon">💻</div>
+                <h3>Aplicações Desktop</h3>
+                <p>Desenvolvimento de soluções desktop com interfaces organizadas, bases de dados e relatórios.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sobre mim -->
+    <section class="about-section" id="sobre-mim">
+        <div class="about-content">
+            <div class="about-avatar"><img src="imagens/yuri1.png" style="border-radius:45%" ></div>
+            <div>
+                <span class="section-label">SOBRE MIM</span>
+                <h2>Olá, eu sou <strong>Yuri Bernardo</strong></h2>
+                <p>Sou estudante da área de Informática de Gestão e programador, apaixonado por tecnologia, desenvolvimento web e criação de sistemas.</p>
+                <p>Gosto de transformar ideias em projectos funcionais, modernos e fáceis de utilizar, trabalhando com desenvolvimento web e aplicações locais.</p>
+                <div class="skills">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span><span>PHP aprendendo</span><span>Laravel, bootstrap</span><span>Base de Dados</span><span>informática</span><span>word</span><span>excel</span><span>powerpoint</span><span>outloock</span><span>dar soluções com IA</span>
+					
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacta-me -->
+<section class="contact-section" id="contacta-me">
+  <div class="contact-hero">
+    <div>
+      <span class="section-label">FALE COMIGO</span>
+      <h2>Vamos transformar a tua ideia em projecto.</h2>
+      <p>Tem uma ideia, site ou sistema para desenvolver? Escolha uma forma de contacto e fale directamente comigo.</p>
+    </div>
+    <div class="contact-orbit"><img src="imagens/yuri.png" style="border-radius:50%"></div>
+  </div>
+  <div class="contact-grid">
+    <a class="contact-card contact-whatsapp" href="https://wa.me/244933324172?text=Olá%20Yuri!%20Vi%20o%20seu%20portfólio%20e%20gostaria%20de%20falar%20sobre%20um%20projecto." target="_blank" rel="noopener noreferrer">
+      <span class="contact-icon">💬</span><div><small>CONTACTO RÁPIDO</small><h3>WhatsApp</h3><p>933 324 172</p><strong>Conversar agora <b>↗</b></strong></div>
+    </a>
+    <a class="contact-card contact-facebook" href="https://www.facebook.com/search/top?q=Yuri%20Cust" target="_blank" rel="noopener noreferrer">
+      <span class="contact-icon">f</span><div><small>REDE SOCIAL</small><h3>Facebook</h3><p>Yuri Cust</p><strong>Ver perfil <b>↗</b></strong></div>
+    </a>
+    <div class="contact-card contact-phone">
+      <span class="contact-icon">📞</span><div><small>CONTACTO DIRECTO</small><h3>Telefone</h3><p>933 324 172</p><strong>Disponível para projectos</strong></div>
+    </div>
+  </div>
+  <div class="contact-bottom">
+    <span>Resposta directa pelo WhatsApp</span><span>•</span><span>Projectos Web</span><span>•</span><span>Software Local</span>
+  </div>
+</section>
+
+<script src="script.js"></script>
+    <footer class="site-footer">
+        <div>
+            <h3>Yuri Bernardo</h3>
+            <p>Programador • Informática de Gestão • Projectos Web e Locais • Contabilidade digital</p>
+        </div>
+        <div class="footer-links">
+           <span><a href="#sobre-mim">Sobre mim</a></span>
+           <span><a href="#projetos-web">Projectos Web</a></span>
+           <span><a href="#projetos-locais">Projectos Locais</a></span>
+          <span><a href="#contacta-me">Contacta-me</a></span><br>
+			<span id="cv"><a href="imagens/Yuri_CV.pdf" target="_blank" rel="noopener noreferrer">O MEU CURRICULUM VITAIL</a></span>    
+			<br><span><a class="whatsapp-footer" href="https://wa.me/244933324172" target="_blank" rel="noopener noreferrer">WhatsApp</a></span>
+        </div>
+    </footer>
+</body>
+</html>
